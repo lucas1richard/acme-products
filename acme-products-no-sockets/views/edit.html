@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h1>Edit</h1>
+  <form class="input-group" method="POST" action="/products/{{product.id}}?_method=PUT">
+    <input type="text" name="name" value="{{product.name}}" class="form-control">
+    <span class="input-group-btn">
+      <input type="submit" value="Submit" class="btn btn-primary">
+    </span>
+  </form>
+{% endblock %}

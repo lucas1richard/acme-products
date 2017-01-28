@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h1>Edit</h1>
+  <form class="input-group" id="editForm">
+
+    <input type="text" id="name" name="name" value="{{product.name}}" class="form-control">
+    <input type="hidden" id="id" name="id" value="{{product.id}}" class="form-control">
+
+    <span class="input-group-btn">
+      <input type="submit" value="Submit" class="btn btn-primary">
+    </span>
+
+  </form>
+  <script type="text/javascript" src="/js/edit.js"></script>
+{% endblock %}

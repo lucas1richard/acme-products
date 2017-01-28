@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h1>Products</h1>
+  <ul class="list-group">
+  {% for product in products %}
+    <li class="list-group-item">
+    <form method="POST" action="products/{{product.id}}?_method=DELETE" style="display:inline">
+      <button class="btn btn-default btn-xs"><span style="color: red" class="glyphicon glyphicon-remove-sign"></span></button>
+    </form>
+    {{product.name}}
+    <a class="btn btn-default btn-xs pull-right" href="/products/{{product.id}}/edit">Edit</a>
+    <br clear="both">
+    </li>
+  {% endfor %}
+  </ul>
+{% endblock %}

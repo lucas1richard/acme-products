@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ACME-Products</title>
+  <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+  <!-- <script type="text/javascript" src=https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js></script> -->
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="/js/constructors.js"></script>
+</head>
+<body>
+<div class="container">
+  <h1>Acme</h1>
+  <ul class="nav nav-tabs">
+    <li><a href="/">Home</a></li>
+    <li><a href="/products">Products</a></li>
+    <li><a href="/add">Add</a></li>
+  </ul>
+  {% block content %}{% endblock %}
+</div>
+</body>
+</html>
