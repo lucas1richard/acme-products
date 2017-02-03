@@ -16,6 +16,7 @@ app.listen(port, () => {
   console.log(chalk.bold(chalk.yellow(`Server listening on port ${port}`)));
 });
 
+//i would rather see app.use('/products', require('./routes/products'));
 app.use( '/', require('./routes'));
 
 app.get( '/', (req, res) => {
